@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Nixie+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+body{
+background-image: url(/public/lightbackground.jpg);
+background-position:center;
+background-repeat: no-repeat;
+background-size: cover;
+height:1200px;
+}
+.navbar .nav-link{
+  font-size:110%;
+  border-radius: 10px;
+  margin-left:10%;
+  margin-right:10%;
+  border-bottom:2px solid transparent;
+  border-left:2px solid transparent;
+}
+
+.navbar .nav-link:hover{
+  background-color: rgba(255, 255, 255, 0.726);
+  border-radius: 10px;
+}
+.mode{
+  float:right;
+  margin-right:5%;
+}
+.section{
+  width:1200px;
+  margin:0 auto;
+  border-radius:15px;
+  box-sizing: content-box;
+  transition: box-shadow,width 0.5s ;
+}
+.section:hover{
+  width:1000px;
+}
+
+#photo{
+  height:350px;
+  width:350px;
+  border-radius: 50%;
+  background-image: url(/public/profile.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: height,width 0.5s;
+}
+
+#intro{
+  background-image:none ;
+  text-align: center;
+  font-size:60px;
+}
+#intro h1{
+  font-size:120px;
+  margin-left:5%;
+  font-family: 'Nixie One', cursive; 
+}
+#intro p{
+  margin-left:5%;
+  font-size:22px;
+}
+#intro span{
+  font-size:32px;
+  font-family: 'Niconne', cursive;
+
+}
