@@ -4,7 +4,6 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
 import "./Portfolio.css";
 import PropTypes from "prop-types";
-import {Introsection2} from './introsection2'
 
 function Navbar(props) {
 
@@ -36,6 +35,7 @@ function Navbar(props) {
   }
 
   function Introsection(props){
+    
     return(
       <>
     <div className={`section container-fluid row text-${props.mode}`}>
@@ -48,14 +48,26 @@ function Navbar(props) {
       <div id="profile" className="col-lg-4 col-md-6 ">
         <div id="photo"></div>
       </div>
-    </div>
-    <div className="container row"></div>
-    <Introsection2 alt="Bachelor in Computer Application"/>
-    <Introsection2 alt="Diploma In ECE"/>
+    </div><br/><br/>
+    <h2 className={`text-center fs-1 text-${props.mode}`}>Qualification</h2>
     </>
     );
   }
-
+ 
+function Introsection2(props){
+  return( 
+   <div>
+  <div className={`card bg-${props.backgroundmode} text-${props.mode}`} Style="width: 18rem;">
+ <img src={props.image} className="card-img-top" alt={props.alt}/>
+ <div className="card-body">
+   <h5 className="card-title">{props.title}</h5>
+   <p className="card-text">{props.text}</p>
+ </div>
+</div>
+</div>
+)
+}
+export {Introsection2}
 
   function Work(){
     return(
