@@ -14,9 +14,9 @@ import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
 
 
 function Packages(){
-  const [mode, setmode] = useState("dark");
-  const[background, setbackground] = useState("light")
-  const [darkbtntext, lightbtntext] = useState("Enable Dark Mode");
+   const [mode, setmode] = useState("dark");
+   const[background, setbackground] = useState("light")
+   const [darkbtntext, lightbtntext] = useState("Enable Dark Mode");
 
  const toggleMode = () => {
     if (mode ==="dark") {
@@ -28,7 +28,7 @@ function Packages(){
       setmode("dark");
       lightbtntext("Enable Dark Mode") 
       setbackground("light");
-      document.body.style.backgroundImage = 'url(/lightbackground.jpg)';
+      document.body.style.backgroundImage = 'url(/lightbackground.jpg)'; 
       }
     }
  
@@ -58,9 +58,9 @@ function Packages(){
     title="Matric(10th Class)" alt="10th class"
     text={<><h4>2015-2016</h4><h4>C-1 Govt.Boys Senior Secondary School Yamuna Vihar</h4><p>Completed 10<sup>th</sup> in first Division</p></>}/>
     </div></div></>}/>
-      <Route path='/Work' element = {<Work/>}/>
-      <Route path='/About' element = {<About/>}/>
-      <Route path='/Contact' element = {<Contact/>}/>
+      <Route path='/Work' element = {<Work mode={mode} toggleMode={toggleMode} backgroundmode={background}/>}/>
+      <Route path='/About' element = {<About mode={mode} toggleMode={toggleMode} backgroundmode={background}/>}/>
+      <Route path='/Contact' element = {<Contact mode={mode} toggleMode={toggleMode} backgroundmode={background}/>}/>
     </Routes>
   </Router>
   </div>

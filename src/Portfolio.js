@@ -4,6 +4,10 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
 import "./Portfolio.css";
 import PropTypes from "prop-types";
+import {Projectdetails} from "./projectdetails"
+import {Project} from "./projects"
+
+
 
 function Navbar(props) {
 
@@ -69,19 +73,36 @@ function Introsection2(props){
 }
 export {Introsection2}
 
-  function Work(){
+
+  function Work(props){
+   const projectelements = Projectdetails.map((content)=>{
+    return <Project
+    id={content.id}
+    title = {content.title}
+    description = {content.description}
+    tech={content.Tech}
+    image={content.image}
+    time={content.time}
+    subtitle={content.subtitle}
+    />
+   })
     return(
-    <div>Work here</div>
+    <>
+    <h1 className={ `text-center text-${props.mode} mb-5`}>Projects</h1>
+      <div class={`row justify-content-center g-3`}>
+        {projectelements}
+        </div>
+    </>
     )
   }
-  function About(){
+  function About(props){
     return(
-    <div>About here</div>
+    <div className={`text-${props.mode}`}>About here</div>
     )
   }
-  function Contact(){
+  function Contact(props){
     return(
-      <div>
+      <div  className={`text-${props.mode}`}>
         Contact here
       </div>
     )

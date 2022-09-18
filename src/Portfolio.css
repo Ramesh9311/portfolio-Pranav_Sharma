@@ -2,10 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
 body{
 background-image: url(/public/lightbackground.jpg);
-background-position:center;
-background-repeat: no-repeat;
-background-size: cover;
-height:1200px;
+background-repeat:repeat;
+
 }
 .navbar .nav-link{
   font-size:110%;
