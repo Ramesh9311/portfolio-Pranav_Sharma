@@ -4,9 +4,8 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
 import "./Portfolio.css";
 import PropTypes from "prop-types";
-import {Projectdetails} from "./projectdetails"
 import {Project} from "./projects"
-
+import {Projectdetails} from "./projectdetails"
 
 
 function Navbar(props) {
@@ -74,27 +73,7 @@ function Introsection2(props){
 export {Introsection2}
 
 
-  function Work(props){
-   const projectelements = Projectdetails.map((content)=>{
-    return <Project
-    id={content.id}
-    title = {content.title}
-    description = {content.description}
-    tech={content.Tech}
-    image={content.image}
-    time={content.time}
-    subtitle={content.subtitle}
-    />
-   })
-    return(
-    <>
-    <h1 className={ `text-center text-${props.mode} mb-5`}>Projects</h1>
-      <div class={`row justify-content-center g-3`}>
-        {projectelements}
-        </div>
-    </>
-    )
-  }
+ 
   function About(props){
     return(
     <div className={`text-${props.mode}`}>About here</div>
@@ -107,7 +86,30 @@ export {Introsection2}
       </div>
     )
   }
-
+ function Work(props){
+  const projectelements = Projectdetails.map((content)=>{
+    return <Project
+    id={content.id}
+    title = {content.title}
+    description = {content.description}
+    tech={content.Tech}
+    image={content.image}
+    time={content.time}
+    subtitle={content.subtitle}
+    props= {props}
+    />
+   })
+   console.log(props);
+    return(
+    <>
+    <h1 className={ `text-center text-${props.mode} mb-5`}>Projects</h1>
+      <div class={`row justify-content-center g-3`}>
+        {projectelements }
+        </div>
+    </>
+  
+    )
+ }
 
 export default Navbar;
 export {Introsection}; 

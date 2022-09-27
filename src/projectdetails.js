@@ -8,7 +8,7 @@ let Projectdetails = [
         subtitle:" A Car service Website (Currently in Progress)",
         Tech:" Html, CSS, Javascript, React Components, Bootstrap, Responsive Design",
         time:"in progress(from 3 months)",
-        description:"A car service website is currently in making. The concept and purpose of this website are to locate the customer to the workshops nearby to their location and provide them car services as soon as effortfully possible. Currently,the login and logout feature, creating a fresh account feature, choosing a car, and saving in your collection feature, etc. are present on the website",
+        description:"A car service website is currently in making.Currently,the login and logout feature, creating a fresh account feature, choosing a car, and saving in your collection feature, etc. are present on the website",
         image:"spareomotors.png"},
         
 
